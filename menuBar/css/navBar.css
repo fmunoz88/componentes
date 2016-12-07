@@ -1,0 +1,34 @@
+/* =============================== */
+/* === Developer: Fabián Muñoz === */
+/* =============================== */
+/* ==== NAV FIXED NORMAL ==== */
+/* = Variable = */
+/* Color background MenuBar */
+/* Color text MenuBar */
+/* Width Logo */
+/* Width Options */
+/* Padding Options (Height menu) */
+nav.nav-normal {
+  background-color: #2980b9;
+  color: #FFF;
+  position: fixed;
+  width: 100%;
+}
+nav.nav-normal ul .logo {
+  text-align: left;
+}
+nav.nav-normal ul li {
+  display: inline-block;
+  text-align: center;
+}
+nav.nav-normal ul .li-normal-options {
+  display: inline-block;
+  text-align: center;
+  width: 59.6%;
+}
+nav.nav-normal ul .li-normal-options li {
+  padding: 17px 25px;
+}
+nav.nav-normal ul li.logo {
+  width: 40%;
+}

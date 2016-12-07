@@ -1,0 +1,52 @@
+/* =============================== */
+/* === Developer: Fabián Muñoz === */
+/* =============================== */
+
+/* ==== NAV FIXED NORMAL ==== */
+
+/* = Variable = */
+@backgroundNormal: #3498db; /* Color background MenuBar */
+@hoverOptionsNormal: #2980b9; /* Color hover options */
+@colorNormal: #FFF; /* Color text MenuBar */
+@widthLogoNormal: 40%; /* Width Logo */
+@widthOptionsNormal: 59.6%; /* Width Options */
+@paddingNormal: 17px 25px; /* Padding Options (height menu) */
+
+nav.nav-normal {
+    background-color: @backgroundNormal;
+    color: @colorNormal;
+    position: fixed;
+    width: 100%;
+    
+    ul {
+        .logo { text-align: left; }
+        
+        li {
+            display: inline-block;  
+            text-align: center;
+        }
+        
+        .cont-li-normal-options {
+            display: inline-block; 
+            text-align: center;
+            width: @widthOptionsNormal;
+            position: relative;
+
+            
+            li a{ 
+                padding: @paddingNormal; 
+                color: white;
+                display: block;
+            }
+            
+        }
+        
+        li.li-normal-options:hover a{
+            background-color: @hoverOptionsNormal;
+        }
+        
+        li.logo { width: @widthLogoNormal; }
+        
+        
+    }
+}
