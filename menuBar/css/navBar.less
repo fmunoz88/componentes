@@ -16,32 +16,33 @@
 nav.nav-normal {
     background-color: @backgroundNormal;
     color: @colorNormal;
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
+    border-bottom: 3px solid white;
+
     
-    ul {
-        overflow: hidden;
-        
-        .logo { text-align: left; }
+    .logo {
+        // display: inline-block; 
+        width: @widthLogoNormal;
+        // border: 1px solid yellow;
+        line-height: @heightOptions;
+    }
+    
+    .content-ul {
+        // display: inline-block; 
+        text-align: center;
+        width: @widthOptionsNormal;
         
         li {
-            display: inline-block;  
-            text-align: center;
-        }
-        
-        .cont-li-normal-options {
-            display: inline-block; 
-            text-align: center;
-            width: @widthOptionsNormal;
-            position: relative;
-
-            li a{ 
-                line-height: @heightOptions;
-                padding: @paddingOptions; 
-                height: @heightOptions;
-                color: white;
+            display: inline-block;
+            
+            a {
                 display: block;
+                line-height: @heightOptions;
+                height: @heightOptions;
+                padding: @paddingOptions; 
+                color: white;
             }
             
         }
@@ -49,9 +50,6 @@ nav.nav-normal {
         li.li-normal-options:hover a{
             background-color: @hoverOptionsNormal;
         }
-        
-        li.logo { width: @widthLogoNormal; }
-        
         
     }
 }
@@ -81,38 +79,34 @@ nav.nav-bottom {
     width: 100%;
     position: absolute; bottom: 0;
     
-    ul {
-        overflow: hidden;
-        
-        .logo { text-align: left; }
+    .logo {
+        // display: inline-block; 
+        width: @widthLogoNormal;
+        // border: 1px solid yellow;
+        line-height: @heightOptions;
+    }
+    
+    .content-ul {
+        // display: inline-block; 
+        text-align: center;
+        width: @widthOptionsNormal;
         
         li {
-            display: inline-block;  
-            text-align: center;
-        }
-        
-        .cont-li-bottom-options {
-            display: inline-block; 
-            text-align: center;
-            width: @widthOptionsBottom;
-            position: relative;
-
-            li a{ 
-                line-height: @heightOptions;
-                padding: @paddingOptions; 
-                height: @heightOptions;
-                color: white;
+            display: inline-block;
+            
+            a {
                 display: block;
+                line-height: @heightOptions;
+                height: @heightOptions;
+                padding: @paddingOptions; 
+                color: white;
             }
             
         }
         
         li.li-bottom-options:hover a{
-            background-color: @hoverOptionsBottom;
+            background-color: @hoverOptionsNormal;
         }
-        
-        li.logo { width: @widthLogoBottom; }
-        
         
     }
 }
@@ -122,13 +116,54 @@ nav.nav-fixed { position: fixed; top: 0; bottom: inherit; }
 
 
 /* == RESPONSIVE == */
+
+/* -- Desktops Medium -- */
+@media (max-width: 1230px) {
+    
+    nav.nav-normal, nav.nav-bottom {
+    
+        .content-page {
+            padding: 0 30px;
+        }
+        
+        .content-ul {
+            li a {
+                padding: 0 13px;
+            }
+        }
+        
+    }
+    
+}
+
+/* -- Tablets -- */
+/* @media (min-width: 768px) and (max-width: 991px) { */
+@media (max-width: 991px) {
+    
+}
+
 /* -- Phone -- */
 @media (max-width: 767px) {
     
-    nav.nav-bottom {
-        position: fixed !important;
-        top: 0 !important;
+    nav.nav-bottom, nav.nav-normal {
+        position: fixed;
+        top: 0;
         bottom: inherit;
+        height: @heightOptions;
+        overflow: hidden;
+        
+        .content-page {
+            padding: 0 20px;
+        }
+        
+        .logo, .content-ul {
+            width: 100%;
+        }
+        
+        .content-ul li {
+            width: 100%;
+        }
+        
     }
     
 }

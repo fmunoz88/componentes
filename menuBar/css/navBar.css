@@ -4,31 +4,97 @@
 /* ==== NAV FIXED NORMAL ==== */
 /* = Variable = */
 /* Color background MenuBar */
+/* Color hover options */
 /* Color text MenuBar */
 /* Width Logo */
 /* Width Options */
-/* Padding Options (Height menu) */
+/* Padding Options (height menu) */
+/* Height Options: Summary is the height menuBar completely */
 nav.nav-normal {
-  background-color: #2980b9;
+  background-color: #3498db;
   color: #FFF;
-  position: fixed;
-  width: 100%;
+  position: relative;
+  max-width: 100%;
+  top: 0;
 }
-nav.nav-normal ul .logo {
-  text-align: left;
-}
-nav.nav-normal ul li {
+nav.nav-normal .logo {
   display: inline-block;
-  text-align: center;
+  width: 40%;
 }
-nav.nav-normal ul .li-normal-options {
+nav.nav-normal .content-ul {
   display: inline-block;
   text-align: center;
   width: 59.6%;
 }
-nav.nav-normal ul .li-normal-options li {
-  padding: 17px 25px;
+nav.nav-normal .content-ul li {
+  display: inline-block;
 }
-nav.nav-normal ul li.logo {
+nav.nav-normal .content-ul li a {
+  display: block;
+  line-height: 70px;
+  height: 70px;
+  padding: 0 25px;
+  color: white;
+}
+nav.nav-normal .content-ul li.li-normal-options:hover a {
+  background-color: #2980b9;
+}
+/* ==== NAV FIXED BOTTOM ==== */
+/* = Variable = */
+/* Color background MenuBar */
+/* Color hover options */
+/* Color text MenuBar */
+/* Width Logo */
+/* Width Options */
+/* Padding Options (height menu) */
+/* Height Options: Summary is the height menuBar completely */
+/* HEADER 100% HEIGHT */
+header {
+  height: 100%;
+  background: #cb483b;
+  background-position: 50% 60%;
+  color: #E6E6E6;
+}
+nav.nav-bottom {
+  background-color: #3498db;
+  color: #FFF;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+nav.nav-bottom .logo {
+  display: inline-block;
   width: 40%;
+}
+nav.nav-bottom .content-ul {
+  display: inline-block;
+  text-align: center;
+  width: 59.6%;
+}
+nav.nav-bottom .content-ul li {
+  display: inline-block;
+}
+nav.nav-bottom .content-ul li a {
+  display: block;
+  line-height: 70px;
+  height: 70px;
+  padding: 0 25px;
+  color: white;
+}
+nav.nav-bottom .content-ul li.li-bottom-options:hover a {
+  background-color: #2980b9;
+}
+nav.nav-fixed {
+  position: fixed;
+  top: 0;
+  bottom: inherit;
+}
+/* == RESPONSIVE == */
+/* -- Phone -- */
+@media (max-width: 767px) {
+  nav.nav-bottom {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: inherit;
+  }
 }
