@@ -13,16 +13,16 @@
 nav.nav-normal {
   background-color: #3498db;
   color: #FFF;
-  position: relative;
-  max-width: 100%;
+  position: fixed;
+  width: 100%;
   top: 0;
+  border-bottom: 3px solid white;
 }
 nav.nav-normal .logo {
-  display: inline-block;
   width: 40%;
+  line-height: 70px;
 }
 nav.nav-normal .content-ul {
-  display: inline-block;
   text-align: center;
   width: 59.6%;
 }
@@ -63,11 +63,10 @@ nav.nav-bottom {
   bottom: 0;
 }
 nav.nav-bottom .logo {
-  display: inline-block;
   width: 40%;
+  line-height: 70px;
 }
 nav.nav-bottom .content-ul {
-  display: inline-block;
   text-align: center;
   width: 59.6%;
 }
@@ -90,11 +89,41 @@ nav.nav-fixed {
   bottom: inherit;
 }
 /* == RESPONSIVE == */
+/* -- Desktops Medium -- */
+@media (max-width: 1230px) {
+  nav.nav-normal .content-page,
+  nav.nav-bottom .content-page {
+    padding: 0 30px;
+  }
+  nav.nav-normal .content-ul li a,
+  nav.nav-bottom .content-ul li a {
+    padding: 0 13px;
+  }
+}
+/* -- Tablets -- */
+/* @media (min-width: 768px) and (max-width: 991px) { */
 /* -- Phone -- */
 @media (max-width: 767px) {
-  nav.nav-bottom {
-    position: fixed !important;
-    top: 0 !important;
+  nav.nav-bottom,
+  nav.nav-normal {
+    position: fixed;
+    top: 0;
     bottom: inherit;
+    height: 70px;
+    overflow: hidden;
+  }
+  nav.nav-bottom .content-page,
+  nav.nav-normal .content-page {
+    padding: 0 20px;
+  }
+  nav.nav-bottom .logo,
+  nav.nav-normal .logo,
+  nav.nav-bottom .content-ul,
+  nav.nav-normal .content-ul {
+    width: 100%;
+  }
+  nav.nav-bottom .content-ul li,
+  nav.nav-normal .content-ul li {
+    width: 100%;
   }
 }
