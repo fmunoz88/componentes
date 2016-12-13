@@ -42,26 +42,29 @@ nav.nav-normal {
     }
 
     .content-ul {
-        // display: inline-block;
-        text-align: center;
         width: @widthOptionsNormal;
 
-        li {
-            display: inline-block;
+        ul {
+            text-align: right;
 
-            a {
-                display: block;
-                line-height: @heightOptions;
-                height: @heightOptions;
-                padding: @paddingOptions;
-                color: white;
-                .transitions-all;
+            li {
+                display: inline-block;
+
+                a {
+                    display: block;
+                    line-height: @heightOptions;
+                    height: @heightOptions;
+                    padding: @paddingOptions;
+                    color: white;
+                    .transitions-all;
+                }
+
             }
 
-        }
+            li.li-normal-options:hover a{
+                background-color: @hoverOptionsNormal;
+            }
 
-        li.li-normal-options:hover a{
-            background-color: @hoverOptionsNormal;
         }
 
     }
@@ -91,7 +94,8 @@ nav.nav-bottom {
     background-color: @backgroundBottom;
     color: @colorBottom;
     width: 100%;
-    position: absolute; bottom: 0;
+    position: absolute; 
+    bottom: 0;
 
     .logo {
         // display: inline-block;
@@ -101,26 +105,29 @@ nav.nav-bottom {
     }
 
     .content-ul {
-        // display: inline-block;
-        text-align: center;
         width: @widthOptionsNormal;
 
-        li {
-            display: inline-block;
+        ul {
+            text-align: right;
 
-            a {
-                display: block;
-                line-height: @heightOptions;
-                height: @heightOptions;
-                padding: @paddingOptions;
-                color: white;
-                .transitions-all;
+            li {
+                display: inline-block;
+
+                a {
+                    display: block;
+                    line-height: @heightOptions;
+                    height: @heightOptions;
+                    padding: @paddingOptions;
+                    color: white;
+                    .transitions-all;
+                }
+
             }
 
-        }
+            li.li-bottom-options:hover a{
+                background-color: @hoverOptionsNormal;
+            }
 
-        li.li-bottom-options:hover a{
-            background-color: @hoverOptionsNormal;
         }
 
     }
@@ -181,25 +188,29 @@ nav.nav-trans {
     }
 
     .content-ul {
-        display: inline-block;
-        text-align: center;
-        max-width: @widthOptionsTrans;
+        width: @widthOptionsNormal;
 
-        li {
-            display: inline-block;
+        ul {
+            text-align: right;
 
-            a {
-                display: block;
-                line-height: @heightOptions;
-                padding: @paddingOptions;
-                color: white;
-                .transitions-all;
+            li {
+                display: inline-block;
+
+                a {
+                    display: block;
+                    line-height: @heightOptions;
+                    height: @heightOptions;
+                    padding: @paddingOptions;
+                    color: white;
+                    .transitions-all;
+                }
+
             }
 
-        }
+            li.li-trans-options:hover a{
+                background-color: @hoverOptionsNormal;
+            }
 
-        li.li-trans-options:hover a{
-            background-color: @hoverOptionsTrans;
         }
 
     }
@@ -217,6 +228,7 @@ nav.nav-trans {
 
     .bottonNav {
         line-height: @heightDownOptions;
+        svg { margin-top: 7px; }
     }
 }
 
@@ -224,19 +236,26 @@ nav.nav-trans {
 .bottonNav {
     display: none;
     z-index: 1;
-    line-height: @heightOptions;
+    // line-height: @heightOptions;
     padding-right: 10px;
     .transitions-all;
     // width: 80%;
 
     #bottonNavRef {
-        background-color: @hoverOptionsNormal;
-        padding: 10px 10px;
+        // background-color: @hoverOptionsNormal;
+        padding: 16px 10px;
         color: white;
         border-radius: 10px;
         border: none;
         cursor: pointer;
+        line-height: @heightOptions;
     }
+
+    svg {
+        .transitions-all;
+        margin-top: 20px;
+    }
+
 }
 
 @media (max-width: 1200px) {
@@ -277,6 +296,11 @@ nav.nav-trans {
         .content-ul {
             min-width: 100% !important;
             padding: 0;
+
+            ul {
+                text-align: center;
+            }
+
         }
 
         .content-ul li {

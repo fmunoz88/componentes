@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 	<head>
     	<meta charset="utf-8">
     	<title>Menú Bar Normal</title>
@@ -7,7 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/navBar.css">
-		<!-- <link rel="stylesheet/less" type="text/css" href="css/navBar.less" /> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+		<link rel="stylesheet/less" type="text/css" href="css/navBar.less" />
+		<script src="js/snap.svg-min.js"></script>
+		<!-- <script src="js/modernizr.custom.js"></script> -->
   	</head>
   	<body>
     	<header>
@@ -17,12 +20,11 @@
 					<div class="logo left">
 						<span>LOGO</span>
 					</div>
-					<div class="bottonNav right text-center">
-						<!-- <a href="#" id="bottonNavRef">MENÚ</a> -->
-						<button type="button" name="button" class="buttonNav" id="bottonNavRef">MENÚ</button>
+					<div class="bottonNav right text-center si-icons si-icons-default">
+						<span id="bottonNavRef" class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
 					</div>
 					<div class="content-ul right">
-						<ul>
+						<ul class="text-right">
 							<li class="li-normal-options"><a href="#">OPCIÓN 1</a></li>
 							<li class="li-normal-options"><a href="#">OPCIÓN 2</a></li>
 							<li class="li-normal-options"><a href="#">OPCIÓN 3</a></li>
@@ -83,7 +85,6 @@
 	<script type="text/javascript">
 
 		$("#bottonNavRef").click(function(){
-
 			//validar si no existe la clase nav-block, agregarla.
 			if(!$('nav').hasClass('nav-block')){
 				$('nav').addClass("nav-block");
@@ -92,24 +93,15 @@
 			}
 
 		});
-
 	</script>
-	<!-- <script type="text/javascript">
-	    less = {
-	        env: "development", // o "production"
-	        async: false,       // carga las importaciones de manera asíncrona
-	        fileAsync: false,   // carga las importaciones de manera asíncrona cuando
-	                            // una página usa un protocolo de archivos
-	        poll: 1000,         // cuando está activado el modo guarda, tiempo en ms
-	                            // entra consultas
-	        functions: {},      // funciones del usuario, especificadas por nombre
-	        dumpLineNumbers: "comments", // o "mediaQuery" o "all"
-	        relativeUrls: false,// ajusta las urls para que sean relativas si false,
-	                            // las urls se considerarán relativas respecto al
-	                            // fichero less de entrada
-	        rootpath: ":/a.com/"// una ruta para añadir al comienzo de cada una de las
-	                            // urls
-	    };
-	</script> -->
 	<script src="js/less.min.js" type="text/javascript"></script>
+	<!--ICONS SVG -->
+	<script src="js/svgicons-config.js"></script>
+	<script src="js/svgicons.js"></script>
+	<script>
+		(function() {
+			[].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
+				var svgicon = new svgIcon( el, svgIconConfig );
+			} );})();
+	</script>
 </html>

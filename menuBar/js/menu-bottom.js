@@ -2,7 +2,7 @@
 
 $(window).bind('scroll', function() {
     // if($(window).width() > 767){
-    
+
         var navHeight = $( window ).height() - 72; //Altura en pixeles del navBar más 2 pixeles para compensar el desfase
 
         if ($(window).scrollTop() > navHeight) { //Abajo
