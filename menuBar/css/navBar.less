@@ -5,13 +5,25 @@
 /* ==== NAV FIXED NORMAL ==== */
 
 /* = Variable = */
-@backgroundNormal: #3498db; /* Color background MenuBar */
-@hoverOptionsNormal: #2980b9; /* Color hover options */
+@backgroundNormal: #e74c3c; /* Color background MenuBar */
+@hoverOptionsNormal: #c0392b; /* Color hover options */
 @colorNormal: #FFF; /* Color text MenuBar */
-@widthLogoNormal: 40%; /* Width Logo */
-@widthOptionsNormal: 59.6%; /* Width Options */
+@widthLogoNormal: 24.6%; /* Width Logo */
+@widthOptionsNormal: 75%; /* Width Options */
 @paddingOptions: 0 25px; /* Padding Options (height menu) */
 @heightOptions: 80px; /* Height Options: Summary is the height menuBar completely */
+@separadorHeader: 80px; /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
+
+#separador-header {
+    height: @separadorHeader;
+}
+
+/* Mixins */
+.transitions-all (@seg: 0.5s) {
+    -webkit-transition: all @seg;
+    -moz-transition: all @seg;
+    transition: all @seg;
+}
 
 nav.nav-normal {
     background-color: @backgroundNormal;
@@ -21,44 +33,44 @@ nav.nav-normal {
     top: 0;
     border-bottom: 3px solid white;
 
-    
     .logo {
-        // display: inline-block; 
+        // display: inline-block;
         width: @widthLogoNormal;
         // border: 1px solid yellow;
         line-height: @heightOptions;
     }
-    
+
     .content-ul {
-        // display: inline-block; 
+        // display: inline-block;
         text-align: center;
         width: @widthOptionsNormal;
-        
+
         li {
             display: inline-block;
-            
+
             a {
                 display: block;
                 line-height: @heightOptions;
                 height: @heightOptions;
-                padding: @paddingOptions; 
+                padding: @paddingOptions;
                 color: white;
+                .transitions-all;
             }
-            
+
         }
-        
+
         li.li-normal-options:hover a{
             background-color: @hoverOptionsNormal;
         }
-        
+
     }
 }
 
 /* ==== NAV FIXED BOTTOM ==== */
 
 /* = Variable = */
-@backgroundBottom: #3498db; /* Color background MenuBar */
-@hoverOptionsBottom: #2980b9; /* Color hover options */
+@backgroundBottom: #e74c3c; /* Color background MenuBar */
+@hoverOptionsBottom: #c0392b; /* Color hover options */
 @colorBottom: #FFF; /* Color text MenuBar */
 @widthLogoBottom: 40%; /* Width Logo */
 @widthOptionsBottom: 59.6%; /* Width Options */
@@ -66,48 +78,49 @@ nav.nav-normal {
 @heightOptions: 70px; /* Height Options: Summary is the height menuBar completely */
 
 /* HEADER 100% HEIGHT */
-header {
-	height: 100%;
-    background: #cb483b;
-	background-position: 50% 60%;
-	color: #E6E6E6;
-}
+// header {
+// 	height: 100%;
+//     background: #cb483b;
+// 	background-position: 50% 60%;
+// 	color: #E6E6E6;
+// }
 
 nav.nav-bottom {
     background-color: @backgroundBottom;
     color: @colorBottom;
     width: 100%;
     position: absolute; bottom: 0;
-    
+
     .logo {
-        // display: inline-block; 
+        // display: inline-block;
         width: @widthLogoNormal;
         // border: 1px solid yellow;
         line-height: @heightOptions;
     }
-    
+
     .content-ul {
-        // display: inline-block; 
+        // display: inline-block;
         text-align: center;
         width: @widthOptionsNormal;
-        
+
         li {
             display: inline-block;
-            
+
             a {
                 display: block;
                 line-height: @heightOptions;
                 height: @heightOptions;
-                padding: @paddingOptions; 
+                padding: @paddingOptions;
                 color: white;
+                .transitions-all;
             }
-            
+
         }
-        
+
         li.li-bottom-options:hover a{
             background-color: @hoverOptionsNormal;
         }
-        
+
     }
 }
 
@@ -119,51 +132,132 @@ nav.nav-fixed { position: fixed; top: 0; bottom: inherit; }
 
 /* -- Desktops Medium -- */
 @media (max-width: 1230px) {
-    
+
     nav.nav-normal, nav.nav-bottom {
-    
+
         .content-page {
             padding: 0 30px;
         }
-        
+
         .content-ul {
             li a {
                 padding: 0 13px;
             }
         }
-        
+
     }
-    
+
 }
+
+/* ==== NAV FIXED TRANSITIONS ==== */
+
+/* = Variable = */
+@backgroundTrans: #e74c3c; /* Color background MenuBar */
+@hoverOptionsTrans: #c0392b; /* Color hover options */
+@colorTrans: #FFF; /* Color text MenuBar */
+@widthLogoTrans: 24.6%; /* Width Logo */
+@widthOptionsTrans: 75%; /* Width Options */
+@paddingOptions: 0 25px; /* Padding Options (height menu) */
+@heightOptions: 80px; /* Height Options: Summary is the height menuBar completely */
+@separadorHeader: 80px; /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
+
+//translation
+@heightDownOptions: 50px;
+
+nav.nav-trans {
+    background-color: @backgroundTrans;
+    color: @colorTrans;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    .transitions-all;
+
+    .logo {
+        max-width: @widthLogoTrans;
+        line-height: @heightOptions;
+      	.transitions-all;
+    }
+
+    .content-ul {
+        display: inline-block;
+        text-align: center;
+        max-width: @widthOptionsTrans;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                line-height: @heightOptions;
+                padding: @paddingOptions;
+                color: white;
+                .transitions-all;
+            }
+
+        }
+
+        li.li-trans-options:hover a{
+            background-color: @hoverOptionsTrans;
+        }
+
+    }
+
+}
+
+.ha-header-small {
+	max-height: @heightDownOptions !important;
+}
+
+.ha-header-small {
+    .logo, .content-ul li a {
+        line-height: @heightDownOptions !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav.nav-trans {
+        .logo, .content-ul{
+            padding: 0 20px;
+        }
+    }
+}
+
+/* RESPONSIVE */
 
 /* -- Tablets -- */
 /* @media (min-width: 768px) and (max-width: 991px) { */
 @media (max-width: 991px) {
-    
+
 }
 
 /* -- Phone -- */
 @media (max-width: 767px) {
-    
-    nav.nav-bottom, nav.nav-normal {
+
+    nav.nav-bottom, nav.nav-normal,nav.nav-trans {
         position: fixed;
         top: 0;
         bottom: inherit;
-        height: @heightOptions;
+        max-height: @heightOptions;
         overflow: hidden;
-        
+
+        .logo{
+            padding: 0 10px;
+        }
+
         .content-page {
-            padding: 0 20px;
+            padding: 0;
         }
-        
-        .logo, .content-ul {
-            width: 100%;
+
+        .content-ul {
+            min-width: 100% !important;
+            padding: 0;
         }
-        
+
         .content-ul li {
             width: 100%;
         }
-        
+
     }
-    
+
 }
