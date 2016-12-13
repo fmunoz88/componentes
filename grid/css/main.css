@@ -20,10 +20,6 @@ body, input, textarea, select {
 	line-height: 1.75em;
 }
 
-article {
-    text-align: justify;
-}
-
 .clear { clear: both; }
 
 a { text-decoration:none; }
@@ -144,14 +140,4 @@ h1 { font: 400 90px/1.2 'Sansita one', Georgia, serif !important; }*/
 .content-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
-}
-
-@media (max-width: 1200px) {
-    article { padding: 0 10px; }
-}
-@media (max-width: 767px) {
-    .content-page {
-        padding: 0px;
-    }
 }

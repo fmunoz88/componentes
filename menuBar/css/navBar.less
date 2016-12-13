@@ -12,7 +12,7 @@
 @widthOptionsNormal: 75%; /* Width Options */
 @paddingOptions: 0 25px; /* Padding Options (height menu) */
 @heightOptions: 80px; /* Height Options: Summary is the height menuBar completely */
-@separadorHeader: 80px; /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
+@separadorHeader: 100px; /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
 
 #separador-header {
     height: @separadorHeader;
@@ -38,6 +38,7 @@ nav.nav-normal {
         width: @widthLogoNormal;
         // border: 1px solid yellow;
         line-height: @heightOptions;
+        .transitions-all;
     }
 
     .content-ul {
@@ -64,6 +65,7 @@ nav.nav-normal {
         }
 
     }
+
 }
 
 /* ==== NAV FIXED BOTTOM ==== */
@@ -159,7 +161,6 @@ nav.nav-fixed { position: fixed; top: 0; bottom: inherit; }
 @widthOptionsTrans: 75%; /* Width Options */
 @paddingOptions: 0 25px; /* Padding Options (height menu) */
 @heightOptions: 80px; /* Height Options: Summary is the height menuBar completely */
-@separadorHeader: 80px; /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
 
 //translation
 @heightDownOptions: 50px;
@@ -213,6 +214,29 @@ nav.nav-trans {
     .logo, .content-ul li a {
         line-height: @heightDownOptions !important;
     }
+
+    .bottonNav {
+        line-height: @heightDownOptions;
+    }
+}
+
+/* BOTON NAV */
+.bottonNav {
+    display: none;
+    z-index: 1;
+    line-height: @heightOptions;
+    padding-right: 10px;
+    .transitions-all;
+    // width: 80%;
+
+    #bottonNavRef {
+        background-color: @hoverOptionsNormal;
+        padding: 10px 10px;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -240,6 +264,7 @@ nav.nav-trans {
         bottom: inherit;
         max-height: @heightOptions;
         overflow: hidden;
+        .transitions-all;
 
         .logo{
             padding: 0 10px;
@@ -258,6 +283,14 @@ nav.nav-trans {
             width: 100%;
         }
 
+        .bottonNav {
+            display: block !important;
+        }
+
+    }
+
+    .nav-block {
+        max-height: 100% !important;
     }
 
 }

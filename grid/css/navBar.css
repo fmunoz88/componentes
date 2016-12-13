@@ -12,7 +12,7 @@
 /* Height Options: Summary is the height menuBar completely */
 /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
 #separador-header {
-  height: 100px;
+  height: 80px;
 }
 /* Mixins */
 nav.nav-normal {
@@ -26,9 +26,6 @@ nav.nav-normal {
 nav.nav-normal .logo {
   width: 24.6%;
   line-height: 80px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
 }
 nav.nav-normal .content-ul {
   text-align: center;
@@ -117,6 +114,7 @@ nav.nav-fixed {
 /* Width Options */
 /* Padding Options (height menu) */
 /* Height Options: Summary is the height menuBar completely */
+/* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
 nav.nav-trans {
   background-color: #e74c3c;
   color: #FFF;
@@ -161,27 +159,6 @@ nav.nav-trans .content-ul li.li-trans-options:hover a {
 .ha-header-small .content-ul li a {
   line-height: 50px !important;
 }
-.ha-header-small .bottonNav {
-  line-height: 50px;
-}
-/* BOTON NAV */
-.bottonNav {
-  display: none;
-  z-index: 1;
-  line-height: 80px;
-  padding-right: 10px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.bottonNav #bottonNavRef {
-  background-color: #c0392b;
-  padding: 10px 10px;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-}
 @media (max-width: 1200px) {
   nav.nav-trans .logo,
   nav.nav-trans .content-ul {
@@ -201,9 +178,6 @@ nav.nav-trans .content-ul li.li-trans-options:hover a {
     bottom: inherit;
     max-height: 80px;
     overflow: hidden;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
   }
   nav.nav-bottom .logo,
   nav.nav-normal .logo,
@@ -225,13 +199,5 @@ nav.nav-trans .content-ul li.li-trans-options:hover a {
   nav.nav-normal .content-ul li,
   nav.nav-trans .content-ul li {
     width: 100%;
-  }
-  nav.nav-bottom .bottonNav,
-  nav.nav-normal .bottonNav,
-  nav.nav-trans .bottonNav {
-    display: block !important;
-  }
-  .nav-block {
-    max-height: 100% !important;
   }
 }
