@@ -94,8 +94,7 @@ nav.nav-bottom {
     background-color: @backgroundBottom;
     color: @colorBottom;
     width: 100%;
-    position: absolute; 
-    bottom: 0;
+    position: absolute; bottom: 0;
 
     .logo {
         // display: inline-block;
@@ -177,44 +176,36 @@ nav.nav-trans {
     color: @colorTrans;
     position: fixed;
     width: 100%;
+    max-height: 100%;
     top: 0;
-
     .transitions-all;
-
     .logo {
         max-width: @widthLogoTrans;
         line-height: @heightOptions;
       	.transitions-all;
     }
-
     .content-ul {
-        width: @widthOptionsNormal;
+        // width: @widthOptionsNormal;
 
         ul {
             text-align: right;
-
             li {
                 display: inline-block;
-
                 a {
                     display: block;
                     line-height: @heightOptions;
-                    height: @heightOptions;
+                    // max-height: @heightOptions;
                     padding: @paddingOptions;
                     color: white;
+                    
                     .transitions-all;
                 }
-
             }
-
             li.li-trans-options:hover a{
                 background-color: @hoverOptionsNormal;
             }
-
         }
-
     }
-
 }
 
 .ha-header-small {
@@ -228,7 +219,9 @@ nav.nav-trans {
 
     .bottonNav {
         line-height: @heightDownOptions;
+
         svg { margin-top: 7px; }
+
     }
 }
 
@@ -248,7 +241,7 @@ nav.nav-trans {
         border-radius: 10px;
         border: none;
         cursor: pointer;
-        line-height: @heightOptions;
+        line-height: @heightDownOptions;
     }
 
     svg {
@@ -283,7 +276,7 @@ nav.nav-trans {
         bottom: inherit;
         max-height: @heightOptions;
         overflow: hidden;
-        .transitions-all;
+        // .transitions-all;
 
         .logo{
             padding: 0 10px;

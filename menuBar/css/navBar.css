@@ -126,6 +126,7 @@ nav.nav-trans {
   color: #FFF;
   position: fixed;
   width: 100%;
+  max-height: 100%;
   top: 0;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -138,9 +139,6 @@ nav.nav-trans .logo {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-nav.nav-trans .content-ul {
-  width: 75%;
-}
 nav.nav-trans .content-ul ul {
   text-align: right;
 }
@@ -150,7 +148,6 @@ nav.nav-trans .content-ul ul li {
 nav.nav-trans .content-ul ul li a {
   display: block;
   line-height: 80px;
-  height: 80px;
   padding: 0 25px;
   color: white;
   -webkit-transition: all 0.5s;
@@ -188,7 +185,7 @@ nav.nav-trans .content-ul ul li.li-trans-options:hover a {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  line-height: 80px;
+  line-height: 50px;
 }
 .bottonNav svg {
   -webkit-transition: all 0.5s;
@@ -215,9 +212,6 @@ nav.nav-trans .content-ul ul li.li-trans-options:hover a {
     bottom: inherit;
     max-height: 80px;
     overflow: hidden;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
   }
   nav.nav-bottom .logo,
   nav.nav-normal .logo,

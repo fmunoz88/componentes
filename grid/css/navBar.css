@@ -12,7 +12,7 @@
 /* Height Options: Summary is the height menuBar completely */
 /* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
 #separador-header {
-  height: 80px;
+  height: 100px;
 }
 /* Mixins */
 nav.nav-normal {
@@ -26,15 +26,20 @@ nav.nav-normal {
 nav.nav-normal .logo {
   width: 24.6%;
   line-height: 80px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 nav.nav-normal .content-ul {
-  text-align: center;
   width: 75%;
 }
-nav.nav-normal .content-ul li {
+nav.nav-normal .content-ul ul {
+  text-align: right;
+}
+nav.nav-normal .content-ul ul li {
   display: inline-block;
 }
-nav.nav-normal .content-ul li a {
+nav.nav-normal .content-ul ul li a {
   display: block;
   line-height: 80px;
   height: 80px;
@@ -44,7 +49,7 @@ nav.nav-normal .content-ul li a {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-nav.nav-normal .content-ul li.li-normal-options:hover a {
+nav.nav-normal .content-ul ul li.li-normal-options:hover a {
   background-color: #c0392b;
 }
 /* ==== NAV FIXED BOTTOM ==== */
@@ -69,13 +74,15 @@ nav.nav-bottom .logo {
   line-height: 80px;
 }
 nav.nav-bottom .content-ul {
-  text-align: center;
   width: 75%;
 }
-nav.nav-bottom .content-ul li {
+nav.nav-bottom .content-ul ul {
+  text-align: right;
+}
+nav.nav-bottom .content-ul ul li {
   display: inline-block;
 }
-nav.nav-bottom .content-ul li a {
+nav.nav-bottom .content-ul ul li a {
   display: block;
   line-height: 80px;
   height: 80px;
@@ -85,7 +92,7 @@ nav.nav-bottom .content-ul li a {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-nav.nav-bottom .content-ul li.li-bottom-options:hover a {
+nav.nav-bottom .content-ul ul li.li-bottom-options:hover a {
   background-color: #c0392b;
 }
 nav.nav-fixed {
@@ -114,12 +121,12 @@ nav.nav-fixed {
 /* Width Options */
 /* Padding Options (height menu) */
 /* Height Options: Summary is the height menuBar completely */
-/* Div que separa los artículos del TOP. Como el nav está flotante (fixed) */
 nav.nav-trans {
   background-color: #e74c3c;
   color: #FFF;
   position: fixed;
   width: 100%;
+  max-height: 100%;
   top: 0;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -133,14 +140,15 @@ nav.nav-trans .logo {
   transition: all 0.5s;
 }
 nav.nav-trans .content-ul {
-  display: inline-block;
-  text-align: center;
-  max-width: 75%;
+  width: 75%;
 }
-nav.nav-trans .content-ul li {
+nav.nav-trans .content-ul ul {
+  text-align: right;
+}
+nav.nav-trans .content-ul ul li {
   display: inline-block;
 }
-nav.nav-trans .content-ul li a {
+nav.nav-trans .content-ul ul li a {
   display: block;
   line-height: 80px;
   padding: 0 25px;
@@ -149,7 +157,7 @@ nav.nav-trans .content-ul li a {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-nav.nav-trans .content-ul li.li-trans-options:hover a {
+nav.nav-trans .content-ul ul li.li-trans-options:hover a {
   background-color: #c0392b;
 }
 .ha-header-small {
@@ -158,6 +166,35 @@ nav.nav-trans .content-ul li.li-trans-options:hover a {
 .ha-header-small .logo,
 .ha-header-small .content-ul li a {
   line-height: 50px !important;
+}
+.ha-header-small .bottonNav {
+  line-height: 50px;
+}
+.ha-header-small .bottonNav svg {
+  margin-top: 7px;
+}
+/* BOTON NAV */
+.bottonNav {
+  display: none;
+  z-index: 1;
+  padding-right: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.bottonNav #bottonNavRef {
+  padding: 16px 10px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  line-height: 50px;
+}
+.bottonNav svg {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 20px;
 }
 @media (max-width: 1200px) {
   nav.nav-trans .logo,
@@ -195,9 +232,22 @@ nav.nav-trans .content-ul li.li-trans-options:hover a {
     min-width: 100% !important;
     padding: 0;
   }
+  nav.nav-bottom .content-ul ul,
+  nav.nav-normal .content-ul ul,
+  nav.nav-trans .content-ul ul {
+    text-align: center;
+  }
   nav.nav-bottom .content-ul li,
   nav.nav-normal .content-ul li,
   nav.nav-trans .content-ul li {
     width: 100%;
+  }
+  nav.nav-bottom .bottonNav,
+  nav.nav-normal .bottonNav,
+  nav.nav-trans .bottonNav {
+    display: block !important;
+  }
+  .nav-block {
+    max-height: 100% !important;
   }
 }

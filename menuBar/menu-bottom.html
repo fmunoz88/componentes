@@ -86,23 +86,7 @@
 		
   	</body>
 	<!-- <script src="js/menuBar.js"></script> -->
-	<!-- <script type="text/javascript">
-	    less = {
-	        env: "development", // o "production"
-	        async: false,       // carga las importaciones de manera asíncrona
-	        fileAsync: false,   // carga las importaciones de manera asíncrona cuando
-	                            // una página usa un protocolo de archivos
-	        poll: 1000,         // cuando está activado el modo guarda, tiempo en ms
-	                            // entra consultas
-	        functions: {},      // funciones del usuario, especificadas por nombre
-	        dumpLineNumbers: "comments", // o "mediaQuery" o "all"
-	        relativeUrls: false,// ajusta las urls para que sean relativas si false,
-	                            // las urls se considerarán relativas respecto al
-	                            // fichero less de entrada
-	        rootpath: ":/a.com/"// una ruta para añadir al comienzo de cada una de las
-	                            // urls
-	    };
-	</script> -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/less.min.js" type="text/javascript"></script>
 	<script src="js/menu-bottom.js" type="text/javascript"></script>
@@ -112,16 +96,14 @@
 	<script src="js/svgicons.js"></script>
 	<script>
 		$("#bottonNavRef").click(function(){
-
 			//validar si no existe la clase nav-block, agregarla.
 			if(!$('nav').hasClass('nav-block')){
 				$('nav').addClass("nav-block");
 			}else{//Pero si existe, se tiene que remover
 				$('nav').removeClass("nav-block");
 			}
-
 		});
-	
+		//Instancia ICON SVG
 		(function() {
 			[].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
 				var svgicon = new svgIcon( el, svgIconConfig );

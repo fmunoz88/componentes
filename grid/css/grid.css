@@ -1,0 +1,106 @@
+/* =============================== */
+/* === Developer: Fabián Muñoz === */
+/* =============================== */
+
+.wf-column {
+    width: 100%;
+}
+
+.grid-box {
+    background-color: #393939;
+    border-radius: 4px;
+    /*box-shadow: 0 1px 5px #ccc;*/
+    /*color: white;*/
+    transition: box-shadow 0.1s linear 0s;
+}
+
+.grid-box:hover{
+    box-shadow: 0 1px 3px grey;
+    opacity: 0.8;
+    transition: opacity 0.2s linear 0s;
+}
+
+.box-img {
+    height: 70%;
+    background-color: #393939;
+    border-radius: 4px 4px 0 0;
+}
+
+.box-title {
+    padding: 8px;
+    /*color: #BDBDBD;*/
+    font-size: 0.875em;
+    line-height: 1.5em;
+    /*border-top: 1px solid #6E6E6E;*/
+}
+
+.box-title a { color: #E6E6E6; }
+
+.grid-box img {
+    overflow: hidden;
+    height: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+.lang-prog {
+    height: auto;
+    margin-top: -25px;
+    padding-right: 5px;
+    
+}
+
+.lang-prog p{
+    height: 25px;
+    float: right;
+    /*padding-top: 2px;*/
+    text-align: center;
+    vertical-align: middle;
+    background: #F16528;
+    position: relative;
+    width: 80px;
+    border-radius: 4px 4px 0 0;
+}
+
+.post-info {
+    color: #FF4000;
+    text-align: right;
+    padding: 0px 10px;
+    opacity: 0.8;
+}
+
+.post-date {
+    float: left;
+}
+
+.post-date p, .post-author p {
+    font: 400 12px/1.6 'Muli', Verdana, Helvetica, sans-serif !important;
+}
+
+.post-author {
+    float: right;
+}
+
+/*
+    Paleta de Colores
+    Rojo: #cb483b
+    Amarrillo: #fac700
+    Azul: #47a3da
+    Negro: #525252
+    Narajando (HTML5): #F16528
+
+ */
+
+/* GRID 1 (300px) */
+.grid-1 > .box-img { height: 180px; }
+.grid-1 > .box-title { min-height: 90px;  }
+/*.grid-1 > .post-info { height: 40px;  }*/
+/* GRID 2 (350px) */
+.grid-2 > .box-img { height: 220px; }
+.grid-2 > .box-title { min-height: 90px; }
+/* GRID 3 (400px) */
+.grid-3 > .box-img { height: 250px; }
+.grid-3 > .box-title { min-height: 90px; ; }
+/* GRID 4 (450px) */
+.grid-4 > .box-img { height: 290px; }
+.grid-4 > .box-title { min-height: 90px;  }
+

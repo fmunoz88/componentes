@@ -125,10 +125,10 @@ h1 { font: 400 90px/1.2 'Sansita one', Georgia, serif !important; }*/
     color: #fff;
 }
 
-.container {
+/*.container {
     max-width: 1200px;
     margin: 0 auto;
-}
+}*/
 
 .left { float: left; }
 .right { float: right; }
