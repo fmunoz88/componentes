@@ -212,7 +212,7 @@ nav.nav-trans .content-ul ul li.li-trans-options:hover a {
     bottom: inherit;
     max-height: 80px;
     overflow: hidden;
-    overflow: scroll;
+    overflow: inherit;
   }
   nav.nav-bottom .logo,
   nav.nav-normal .logo,
