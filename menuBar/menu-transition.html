@@ -5,8 +5,8 @@
     	<title>Menú Bar Transition 3</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- <meta property="fb:app_id" content="{735225223293037}" /> -->
-		<meta property="fb:admins" content="{BMh6wzE5B5}"/>
+		<!-- <meta property="fb:app_id" content="{735225223293037}" />
+		<meta property="fb:admins" content="{10210843169856247}"/> -->
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/navBar.css">
 		<!-- <link rel="stylesheet/less" type="text/css" href="css/navBar.less" /> -->
@@ -14,6 +14,14 @@
 		<script src="js/snap.svg-min.js"></script>
   	</head>
   	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=735225223293037";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<!-- <div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
@@ -22,7 +30,7 @@
 		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script> -->
-		<script>
+		<!-- <script>
 			window.fbAsyncInit = function() {
 				FB.init({
 					appId      : '735225223293037',
@@ -38,7 +46,7 @@
 				js.src = "//connect.facebook.net/es_LA/sdk.js";
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
-		</script>
+		</script> -->
     	<header>
 
     		<nav class="nav-trans">
