@@ -5,6 +5,8 @@
     	<title>Menú Bar Transition 3</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="fb:app_id" content="{735225223293037}" />
+		<!-- <meta property="fb:admins" content="{DByCMuY5cXF}"/> -->
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/navBar.css">
 		<!-- <link rel="stylesheet/less" type="text/css" href="css/navBar.less" /> -->
@@ -12,6 +14,31 @@
 		<script src="js/snap.svg-min.js"></script>
   	</head>
   	<body>
+		<!-- <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script> -->
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '735225223293037',
+					xfbml      : true,
+					version    : 'v2.8'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/es_LA/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
     	<header>
 
     		<nav class="nav-trans">
@@ -76,6 +103,19 @@
 				Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
 			</div>
 		</article>
+
+		<section class="commentarios" style="margin-top: 30px;">
+			<div class="content-page">
+				<div class="fb-comments" data-mobile="true" data-href="http://127.0.0.1/repositorios/componentes/menuBar/menu-transition.html" data-colorscheme="light" data-width="100%" data-numposts="5"></div>
+				<!-- <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div> -->
+
+			</div>
+		</section>
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<!-- <script src="js/menuBar.js"></script> -->

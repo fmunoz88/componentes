@@ -131,6 +131,7 @@ nav.nav-trans {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+  z-index: 5;
 }
 nav.nav-trans .logo {
   max-width: 24.6%;
@@ -212,7 +213,7 @@ nav.nav-trans .content-ul ul li.li-trans-options:hover a {
     bottom: inherit;
     max-height: 80px;
     overflow: hidden;
-    overflow: inherit;
+    overflow: scroll;;
   }
   nav.nav-bottom .logo,
   nav.nav-normal .logo,
