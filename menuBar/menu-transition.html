@@ -12,6 +12,19 @@
 		<!-- <link rel="stylesheet/less" type="text/css" href="css/navBar.less" /> -->
 		<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
 		<script src="js/snap.svg-min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		$.ajaxSetup({ cache: true });
+		$.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+		FB.init({
+		  appId: '{your-app-id}',
+		  version: 'v2.5' // or v2.0, v2.1, v2.2, v2.3
+		});     
+		$('#loginbutton,#feedbutton').removeAttr('disabled');
+		FB.getLoginStatus(updateStatusCallback);
+		});
+		});
+		</script>
   	</head>
   	<body>
 		<div id="fb-root"></div>
@@ -22,31 +35,6 @@
 		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=735225223293037";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-		<!-- <div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script> -->
-		<!-- <script>
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId      : '735225223293037',
-					xfbml      : true,
-					version    : 'v2.8'
-				});
-			};
-
-			(function(d, s, id){
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) {return;}
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/es_LA/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script> -->
     	<header>
 
     		<nav class="nav-trans">
@@ -114,14 +102,7 @@
 
 		<section class="commentarios" style="margin-top: 30px;">
 			<div class="content-page">
-				<div class="fb-comments" data-mobile="true" data-href="http://127.0.0.1/repositorios/componentes/menuBar/menu-transition.html" data-colorscheme="light" data-width="100%" data-numposts="5"></div>
-				<!-- <div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div> -->
-
+				<div class="fb-comments" data-mobile="true" data-href="http://fabianmunoz.com/componentes/menuBar/menu-transition.html" data-colorscheme="light" data-width="100%" data-numposts="5"></div>
 			</div>
 		</section>
 
